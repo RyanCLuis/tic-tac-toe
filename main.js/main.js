@@ -62,7 +62,7 @@ let winner
 
 // DOM Elements
 const messageEl = document.querySelector('h2')
-const playAgainButton = document.querySelector('button')
+const resetButton = document.querySelector('button')
 const markerEl = [...document.querySelectorAll('#board > div')]
 console.log('markerEl \n', markerEl)
 
@@ -88,14 +88,39 @@ function renderBoard() {
             // console.log('cellVal', cellVal)
             // console.log('rowIdx', rowIdx)
             const cellId = `c${colIdx}r${rowIdx}`
-            console.log('cellId', cellId)
+            // console.log('cellId', cellId)
             const cellEl = document.getElementById(cellId)
-            console.log('cellEl', cellEl)
+            // console.log('cellEl', cellEl)
             cellEl.style.background = color[cellVal]
         })
     })
 }
 
+function renderControl() {
+resetButton.style.visibility = winner ? 'visible' : 'hidden'
+markerEl.forEach(() =>{
+})}
+
+function renderMessage() {
+    if (winner === 'T') {
+        messageEl.innerText = "It's a draw!"
+    } else if (winner) {
+        messageEl.innerHTML = `
+            <span style="color: ${color[winner]}">
+                ${color[winner].toUpperCase()}
+                </span> Wins!
+        `
+    } else {
+        messageEl.innerHTML = `
+        <span style="color: ${color[turn]}">
+            ${color[turn].toUpperCase()}
+            </span>'s Turn!
+    `
+    }
+}
+
 function render() {
     renderBoard()
+    renderMessage()
+    renderControl()
 }
