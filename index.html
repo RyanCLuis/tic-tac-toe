@@ -2,33 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="style.css/style.css">
-    <script defer src="main.js/main.js"></script>
-    <title>Tic-Tac-Toe</title>
 </head>
 <body>
-    <header>Game Board</header>
-    <h2>Red's Turn</h2>
-    <section id="board">
-        <!-- row 3 -->
-        <div id="c0r2"></div>
-        <div id="c1r2"></div>
-        <div id="c2r2"></div>
-        <!-- row 2 -->
-        <div id="c0r1"></div>
-        <div id="c1r1"></div>
-        <div id="c2r1"></div>
-        <!-- row 1 -->
-        <div id="c0r0"></div>
-        <div id="c1r0"></div>
-        <div id="c2r0"></div>
-    </section>
-    <div>
-        <button id="button">Reset Game!</button>
+    <div class="container">
+        <h1 id="playerText">Tic Tac Toe</h1>
+        <button id="restartBtn">Restart?!</button>
+
+        <div id="gameboard">
+            <div class="box" id="0"></div>
+            <div class="box" id="1"></div>
+            <div class="box" id="2"></div>
+            <div class="box" id="3"></div>
+            <div class="box" id="4"></div>
+            <div class="box" id="5"></div>
+            <div class="box" id="6"></div>
+            <div class="box" id="7"></div>
+            <div class="box" id="8"></div>
+        </div>
     </div>
+    
+    <script src="main.js/main.js"></script>
 </body>
 </html>
